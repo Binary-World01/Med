@@ -1,0 +1,133 @@
+/*  Basic Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 10px;
+    padding: 0;
+    overflow: hidden;
+    background: rgb(245, 245, 245);
+}
+
+/*  Navbar */
+.navbar {
+    background: white;
+    display: flex;
+    width: 94vw;
+    margin: auto;
+    padding: 15px 20px;
+    border-radius: 80px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+nav h2 {
+    color: #1E3A8A;
+    font-size: 24px;
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    font-weight: 550;
+    padding: 0;
+    margin: 0;
+    left: 270px;
+    top: 12px;
+    position: relative;
+}
+
+/*  Navigation Items */
+.nav-item {
+    text-decoration: none;
+    color: #1E3A8A;
+    font-size: 16px;
+    padding: 12px 25px;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    transition: color 0.3s ease-in-out; /* Smooth text color change */
+}
+
+/*  Moving Cylinder */
+.nav-indicator {
+    position: absolute;
+    height: 40px;
+    background: #1E3A8A;
+    border-radius: 20px;
+    transition: transform 0.6s ease-in-out, width 0.6s ease-in-out;
+    z-index: 0;
+    top: 35%;
+    transform: translateY(-50%);
+}
+
+/* Highlight text inside the moving cylinder */
+.nav-item.active,
+.nav-item:hover {
+    color: white !important;
+}
+
+/* data conntaining div */
+
+.data {
+    display: inline-block;
+    top: px;
+    width: 94vw;    
+    margin:35px 30px;
+    height: 450px;
+    border-radius: 30px;
+    background-color: white;
+}
+
+.btn {
+    background-color: #1E3A8A;
+    color: white;
+    padding: 10px 20px;
+    height: 40px;
+    border-radius: 20px;
+    margin: 30px 0;
+    margin-left:900px;
+    cursor: pointer;
+    border: none;
+}
+
+.data h2 {
+    color: #1E3A8A;
+    font-size: 24px;
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-left: 30px;
+    padding: 0;
+}
+
+/*  Table - New Design */
+table {
+    width: 97%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-left: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/*  Table Headers */
+th {
+    background: #1E3A8A;
+    color: white;
+    font-size: 18px;
+    padding: 12px;
+}
+
+/*  Table Cells */
+td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    transition: 0.3s;
+}
+
+td:hover {
+    background: #f9f9f9;
+}
+

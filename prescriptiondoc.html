@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prescription Dashboard</title>
+    <link rel="stylesheet" href="styles1.css">
+    <!-- Include Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <nav class="navbar">
+        <h2>Prescriptions</h2>
+        <ul>
+            <li>
+                <a href="dashboard.html">
+                    <i class="fas fa-home"></i> Home
+                </a>
+            </li>
+            <li>
+                <a href="dashboard1.html">
+                    <i class="fas fa-user-injured"></i> Patients
+                </a>
+            </li>
+            <li>
+                <a href="face_recognition.html">
+                    <i class="fas fa-camera"></i> Face Recognition
+                </a>
+            </li>
+            <li>
+                <a href="prescriptiondoc.html">
+                    <i class="fas fa-prescription"></i> Prescriptions
+                </a>
+            </li>
+            <li>
+                <a href="try.html">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </a>
+            </li>
+            <li>
+                <img src="C:\Users\Administrator\Desktop\logo.png.png" width="40" height="40">
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Prescription Records Section -->
+    <div class="container">
+        <h2>Prescription Records</h2>
+<button class="add-btn" onclick="openAddPrescriptionForm()">
+            <i class="fas fa-user-plus"></i> Add Patient's Prescription
+        </button>
+
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Prescription</th>
+                    <th>Appointment #</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="prescriptionTable">
+                <!-- Prescription records will be dynamically added here -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Overlay -->
+    <div id="overlay" class="overlay" onclick="hidePopup()"></div>
+
+    <!-- Prescription Form Popup -->
+    <div id="popupForm" class="popup">
+        <span class="close-btn" onclick="hidePopup()">&times;</span>
+        <h3 id="formTitle">Upload Prescription</h3>
+        <form id="prescriptionForm">
+            <input type="hidden" id="editIndex">
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter name" required>
+
+            <label for="prescriptionFile">Upload Prescription:</label>
+            <input type="file" id="prescriptionFile" required>
+
+            <button type="button" onclick="savePrescription()">Save</button>
+        </form>
+    </div>
+
+    <script src="prescriptiondoc.js"></script>
+</body>
+</html>

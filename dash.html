@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/final year project logo.png" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dash.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <span>
+            <h2>Doctor Dashboard</h2>
+        </span>
+        
+        <ul>
+            <div class="nav-indicator"></div>  <!-- Moving Cylinder -->
+            <li><a href="#" class="nav-item active"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#" class="nav-item"><i class="fas fa-user-injured"></i> Patients</a></li>
+            <li><a href="#" class="nav-item"><i class="fas fa-camera"></i> Prescriptions</a></li>
+            <li><a href="#" class="nav-item"><i class="fas fa-prescription"></i> Face Recognition</a></li>
+            <li><a href="#" class="nav-item"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+        </ul>
+        
+    </nav>
+    <div class="data">
+        <span><h2>Patient Records</h2></span>
+        <button class="btn"  onclick="openAddPatientForm()"><i class="fas fa-user-plus"></i> Add Patient</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Contact</th>
+                    <th>Appointment</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="patientTable"></tbody>
+        </table>
+    </div>
+    
+    <script src="dash.js"></script>
+</body>
+</html>
