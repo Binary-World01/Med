@@ -33,7 +33,7 @@ function loginUser(event, role) {
     // Simulated login (Remove after connecting database)
     if (username === "admin" && password === "password") {
         localStorage.setItem("loggedIn", role);
-        window.location.href = index.html;
+        window.location.href = "index.html";
     } else {
         errorMessage.innerText = "Invalid username or password";
         errorMessage.style.display = "block";
