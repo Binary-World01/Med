@@ -19,11 +19,10 @@
             <div class="nav-indicator"></div>  <!-- Moving Cylinder -->
             <li><a href="#" class="nav-item active"><i class="fas fa-home"></i> Home</a></li>
             <li><a href="#" class="nav-item"><i class="fas fa-user-injured"></i> Patients</a></li>
-            <li><a href="#" class="nav-item"><i class="fas fa-camera"></i> Prescriptions</a></li>
+            <li><a href="prescriptiondoc.html" class="nav-item"><i class="fas fa-camera"></i> Prescriptions</a></li>
             <li><a href="#" class="nav-item"><i class="fas fa-prescription"></i> Face Recognition</a></li>
-            <li><a href="#" class="nav-item"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            <li><a href="#" class="nav-item" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
         </ul>
-        
     </nav>
     <div class="data">
         <span><h2>Patient Records</h2></span>
@@ -41,7 +40,20 @@
             <tbody id="patientTable"></tbody>
         </table>
     </div>
-    
-    <script src="dash.js"></script>
+
+    <script>
+        // Check if the user is logged in (if not, redirect to login page)
+        window.onload = function() {
+            if (!localStorage.getItem('loggedIn')) {
+                window.location.href = 'login.html'; // Redirect to login if not logged in
+            }
+        };
+
+        // Logout function to clear login state and redirect to login page
+        function logout() {
+            localStorage.removeItem('loggedIn'); // Clear login state
+            window.location.href = 'login.html'; // Redirect to login page
+        }
+    </script>
 </body>
 </html>
